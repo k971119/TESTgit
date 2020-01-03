@@ -1,4 +1,4 @@
-package pr;//뭐가 모르겠는거야?
+package pr;
 
 class DeckTest {
 	public static void main(String args[]) {
