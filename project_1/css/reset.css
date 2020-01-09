@@ -28,6 +28,11 @@ textarea,input{
 
 label, button,input [type:"submit"], input[type:"reset"]{cursor:pointer;}
 
+a:link    {color:#696f74; text-decoration:none}
+a:visited {color:#696f74; text-decoration:none}
+a:hover   {color:#486d9b; text-decoration:none}
+a:active  {color:#486d9b; text-decoration:none}
+
 .sr-only{
     position : absolute;
     left:-9999px;

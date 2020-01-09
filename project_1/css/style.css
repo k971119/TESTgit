@@ -6,57 +6,7 @@
 header{
     width:100%;
     height: 100%;
-}
-header>.container{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/aire_mockup.jpg);
-    background-position: 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-header>.container>.shadow{
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color: rgba(0,0,0,0.6);
-}
-header>.container>.area{
-    position: absolute;
-    top:50%;
-    left:50px;
-    width:180px;
-    /* height:145px; */
-    /* margin-top: -72.5px; */
-}
-
-header>.container>.area>h1{
-    width:180px;
-    height:90px;
-    margin-bottom: 55px;
-    text-indent: -9999px;
-    background-image: url(../images/logo_blue_retina.png);
-    background-position: 50% 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-header>.container>.area>p{
-    display: block;
-    height:45px;
-    color: #fff;
-    font-weight: 800;
-    font-size: 22px;
-    text-align: center;
-    white-space:nowrap;
-    
-}
-
-header>.container>.area>p>span{
-    color:#00aaad;
-}
+} 
 
 section{
     width:100%;
