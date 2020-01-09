@@ -1,0 +1,273 @@
+@charset "utf-8" ;
+
+body{
+    /* background-color: #000; */
+    *zoom:1;
+    background-color: #000;
+}
+#wrap{
+    width:100%;
+    height:100%;
+}
+
+.loading{
+    position: fixed;
+    width:100%;
+    height:100%;
+    background-color: #000;
+    z-index:1000;
+}
+
+.loading>.main{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:500px;
+    height:200px;
+    margin-top: -100px;
+    margin-left: -250px;
+}
+.loading>.main>h1{
+    height:90px;
+    text-indent: -9999px;
+    background-image: url(../images/idea_main_logo.png);
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.loading>.main>p{
+    width:150px;
+    position: absolute;
+    top:80px;
+    left:50%;
+    text-indent: -9999px;
+    margin-left: -75px;
+}
+.loading>.main>p:before{
+    
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width:200px;
+    min-width:200px;
+    clear:both;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    text-indent: 0;
+    margin-left: -100px;
+    text-align: center;
+    content:'| | | | | | | | | | | |';
+}
+
+.loading>.main>p:after{
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: -80px;
+    /* width:120px; */
+    width:20px;
+    height:50px;
+    clear:both;
+    content:'';
+    background-color: #000;
+    animation: loal 1.75s linear infinite;
+    transform-origin:50% 50%;
+}
+
+@keyframes loal{
+    100%{
+        left:190px;
+    }
+}
+
+header{
+    width:100%;
+    height:100%;
+    background-image: url(../images/idea_head_bg.jpg);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+header>.container{
+    position: relative;
+    width:50%;
+    height:100%;
+    background-color: #000;
+    
+}
+header>.container>h2{
+    position: absolute;
+    top:50%;
+    left:22vw;
+    width:50%;
+    height:90px;
+    margin-top: -45px;
+    text-indent: -9999px;
+    background-image: url(../images/idea_main_logo.png);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border: 1px solid #fff; */
+}
+header>.container>p{
+    position: absolute;
+    top:50%;
+    left:22vw;
+    width:50%;
+    height:50px;
+    margin-top: 60px;
+    text-indent: -9999px;
+    background-image: url(../images/idea_main_p.png);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border: 1px solid #fff; */
+}
+
+#pg1{
+    width:100%;
+    height:100%;
+    background-image: url(../images/idea_pg1_bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#pg2{
+    height:100%;
+    background-color: #fff;
+    background-image: url();
+}
+
+#pg3{
+    position: relative;
+    height:100%;
+    background-image: url(../images/idea_pg3_bg.jpg);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#pg3>.container{
+    position: absolute;
+    top:0;
+    right:0;
+    width:50%;
+    height:100%;
+    text-align: center;
+    vertical-align: center;
+    background-color: #000;
+}
+#pg3>.container>p:nth-child(1){
+    position: absolute;
+    top:50%;
+    right:22vw;
+    width:50%;
+    height:90px;
+    margin-top: -45px;
+    text-indent: -9999px;
+    /* background-image: url(../images/idea_bg3_p1.png); */
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#pg3>.container>p:nth-child(2){
+    position: absolute;
+    top:50%;
+    right:22vw;
+    width:50%;
+    height:50px;
+    margin-top: 60px;
+    text-indent: -9999px;
+    /* background-image: url(../images/idea_bg3_p2.png); */
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+#pg4{
+    height:100%;
+    background-image: url(../images/idea_pg4_bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#pg4>.container{
+    position: relative;
+    width:50%;
+    height:100%;
+    background-color: #000;
+}
+#pg4>.container>p:nth-child(1){
+    position: absolute;
+    top:50%;
+    left:22vw;
+    width:50%;
+    height:90px;
+    margin-top: -45px;
+    text-indent: -9999px;
+    /* background-image: url(../images/idea_main_logo.png); */
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#pg4>.container>p:nth-child(2){
+    position: absolute;
+    top:50%;
+    left:22vw;
+    width:50%;
+    height:50px;
+    margin-top: 60px;
+    text-indent: -9999px;
+    /* background-image: url(../images/idea_main_p.png); */
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#sns{
+    width:100%;
+    height:500px;
+    /* background-color: #fff; */
+}
+
+#sns>.container{
+    width:100%;
+    margin-top: 10vh;
+    text-align: center;
+}
+#sns>.container>h3{
+    font-size: 5vw;
+}
+#sns>.container>ul{
+    display:flex;
+    margin-top: 5vw;
+    justify-content: space-around;
+}
+#sns>.container>ul>li{
+    /* display: inline-block; */
+    width:20%;
+    border: 1px solid #fff;
+    transition:all 0.5s;
+}
+#sns>.container>ul>li:hover{
+    background-color: #fff;
+}
+#sns>.container>ul>li>a{
+    display: block;
+    height:250px;
+    line-height: 250px;
+}
+
+footer{
+    height:300px;
+    background-color: #fff;
+}
