@@ -24,38 +24,66 @@
             <div class="shadow"></div>
             <!-- 메인 컨테이너 -->
             <div class="container">
-               <h1>aire</h1>
 
-                <p> MAKE IT <br>
-                    <strong>BREATHE</strong>
-                </p>
+                <div class="mnuWrap">
+                    <h1>aire</h1>
 
-                <p class="sentence">In matters of user experience the whole is<br>
-                    greater than the sum of its parts.</p>
+                    <!-- 네비게이션 메뉴 -->
+                    <div class="navMnu">
+                        <ul>
+                            <li class="on"><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Servies</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div><!-- eof mnuWrap-->
 
-                <p><a href="#">link</a></p>
+                <div class="stcBox">
+                    <p class="title"> MAKE IT BREATHE</p>
 
-                <!-- 네비게이션 메뉴 -->
-                <div class="navMnu">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Servies</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                    <p class="sentence">In matters of user experience the whole is<br>
+                        greater than the sum of its parts.</p>
+
+                    <p class="link"><a href="#">Enter</a></p>
                 </div>
+                
 
-                <p>Scroll down</p>
+                <p class="scroll">Scroll down</p>
 
             </div> <!-- 메인 끝 -->
 
-            
+            <div class="mnuOpen">
+                <div class="mnuBar">
+                    <p class="bar"></p>
+                    <p class="bar"></p>
+                    <p class="bar"></p>
+                </div>
+            </div>
+
+            <div class="sub-windowMnu">
+                <ol>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Servies</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ol>
+
+                <p><a href="#">facebook</a></p>
+                
+                <p>© 2019-2020 Shallwead All Rights Reserved.</p>
+
+                <button class="exit">메뉴 닫기</button>
+            </div>
+
         </header>
         <section id="about">
             <div class="container">
-                <h2>쉴위애대는 데이터 중심의<br>
+                <h2>쉴위애드는 데이터 중심의<br>
                 모바일 광고기술(AD-TECH) 전문기업입니다.</h2>
 
                 <p>2011년 모바일 광고 플랫폼으로 출발한 쉘위애드는 데이터 기반의 디지털 마케팅 플랫폼 서비스로 사업 영역을 확장하고 있습니다.</p>
@@ -288,8 +316,63 @@
                 </div>
             </div>
         </section>
-        <section id="contact"></section>
-        <footer></footer>
+        <section id="contact">
+            <div class="container">
+                <div class="info">
+                    <!-- 하단 로고 -->
+                    <h6>ShallWeAD</h6>
+                    
+                    <address>
+                        주식회사 쉘위애드 <br>
+                        서울시 금천구 가산디지털 1로 168 A동 14층 <br>
+                        대표자 | 김상한
+                    </address>
+                    
+                    <p>
+                        고객센터 | 02-6903-9173 <br>
+                        FAX | 02-6903-9171 <br>
+                        광고/제휴문의 | mkt_1@shallwead.com <br>
+                        채용문의 | recruit@shallwead.com
+                    </p>
+                    
+                    <p>
+                        사업자등록번호 | 220-88-11133 <br>
+                        통신판매업 | 제 2019-서울금천-0942호 <br>
+                        특허등록번호 | 제 10-1356719 <br>
+                        특허등록번호 | 제 10-1380953
+                    </p>
+
+                    <p><a href="#">facebook</a></p>
+                    
+                    <p><a href="#">이용약관</a></p>
+                    <p><a href="#">개인정보처리방침</a></p>
+                </div>
+                <div class="tel">
+                    <p>Contact</p>
+                    <form name="contact" action="#" method="post">
+                        <!-- <input type="text" value="이름" onfocus="this.value=''" onblur="this.value='이름'"> -->
+                        <input type="text" placeholder="이름">
+                        <input type="email"  placeholder="이메일">
+                        <select name="division" id="choice">
+                            <option value="0">마케터</option>
+                            <option value="1">대행사</option>
+                            <option value="2">매체사</option>
+                            <option value="3">앱 개발자</option>
+                            <option value="4">기타</option>
+                        </select>
+                        <textarea name="Questions" id="qt" cols="30" rows="10" placeholder="문의사항"></textarea>
+                        <button>Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Copyright © 2019-2020 Shallwead. All Rights Reserved.</p>
+        </footer>
+        <aside>
+            <!-- 탑 버튼 / 네비게이션 -->
+            <p>맨 위로 이동</p>
+        </aside>
     </div>
 </body>
 </html>
