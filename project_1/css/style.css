@@ -1,6 +1,28 @@
-body{
+body,html{
     width: 100%;
     height: 100%;
+    overflow-x:hidden;
+    
+}
+
+body.stop{
+    overflow:hidden;
+}
+
+body::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar{
+    width:10px;
+    background-color: #f5f5d5;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #AD0200;
+}
+body::-webkit-scrollbar-track{
+    background-color: #838b8b;
 }
 
 #wrap{
@@ -13,9 +35,9 @@ header{
     width:100%;
     height: 100%;
     min-width:800px;
+    user-select:none; /* 드래그 비활성화 */
 }
 
-header>.shadow{}
 header>.container{
     position: absolute;
     top:0;
@@ -136,9 +158,13 @@ header>.container>.stcBox>.link{
     margin-left: -75px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: linear-gradient(to right, #00aaad, #fff);
+    /* background: linear-gradient(to right, #00aaad, #fff); */
+    background-image: linear-gradient(to right, #00aaad 0%, #2ff3f6 49%, #00aaad 100%);
+    /* background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%); */
+    background-size:200% auto;
     border-radius:25px;
     transition:all 1s;
+    
 }
 
 header>.container>.stcBox>.link>a{
@@ -147,10 +173,11 @@ header>.container>.stcBox>.link>a{
     font-size: 16px;
 }
 
-/* header>.container>.stcBox>.link:hover{
-    background: linear-gradient(to right, #fff, #00aaad);
-    transition:all 1s;
-} */
+header>.container>.stcBox>.link:hover{
+    background-position:100% 50%;
+    
+}
+
 
 @media screen and (max-height:440px){
     header>.container>.stcBox{
@@ -196,6 +223,50 @@ header>.container>.stcBox>.link>a{
     }
 }
 
+header>.container>.scroll{
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    width:200px;
+    height:50px;
+    color: #fff;
+    text-align: center;
+    margin-left: -100px;
+    transition:all 0.5s;
+    cursor:pointer;
+    z-index:1;
+}
+
+header>.container>.scroll:hover{
+    color: #00aaad;
+}
+
+header>.container>.scroll:after{
+    position: absolute;
+    top:60%;
+    left:50%;
+    width:0;
+    height:0;
+    margin-left: -10px;
+    text-align: center;
+    content:'';
+    border-top:6px solid #e6e6e6;
+    border-right:6px solid transparent;
+    border-left:6px solid transparent;
+    animation:triMove 1.1s ease-in-out  infinite;
+
+}
+
+@keyframes triMove{
+    0%{
+        top:60%;
+    }
+    100%{
+        top:90%;
+        opacity:0.1;
+    }
+}
+
 header>.mnuOpen{
     position: absolute;
     top:20px;
@@ -219,8 +290,9 @@ header>.mnuOpen>.mnuBar>.bar{
     right:0;
     width:100%;
     height:3px;
-    background-color: #fff;
     margin-bottom: 4px;
+    text-indent: -9999px;
+    background-color: #fff;
     transition:all 0.5s;
 }
 header>.mnuOpen>.mnuBar>.bar:nth-child(2){
@@ -240,7 +312,139 @@ header>.mnuOpen>.mnuBar:hover>.bar{
     width:100%;
 }
 
-header>.scroll{}
+header>.sub-wdMnu{
+    overflow:auto;
+    position: absolute;
+    top:0;
+    right:-40%;
+    width:40%;
+    height:100%;
+    background-image: linear-gradient(to right, #00aaad 0%, #25c4c7 49%);
+    transition:all 0.5s;
+    z-index:100;
+}
+
+header>.sub-wdMnu.open{
+    right:0;
+}
+
+header>.sub-wdMnu::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #f5f5f5;
+}
+
+header>.sub-wdMnu::-webkit-scrollbar{
+    width:10px;
+    background-color: #f5f5d5;
+}
+header>.sub-wdMnu::-webkit-scrollbar-thumb{
+    background-color: #AD0200;
+}
+header>.sub-wdMnu::-webkit-scrollbar-track{
+    background-color: #838b8b;
+
+}
+
+header>.shadow{
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index:100;
+}
+
+
+header>.sub-wdMnu>.container{
+    position: absolute;
+    top:80px;
+    left:40px;
+
+    /* width:80%; */
+}
+
+header>.sub-wdMnu>.container>ol{
+    
+}
+header>.sub-wdMnu>.container>ol>li{
+    margin-bottom:20px;
+    box-sizing:border-box;
+}
+header>.sub-wdMnu>.container>ol>li:hover{
+    border-bottom: 3px solid #fff
+}
+
+header>.sub-wdMnu>.container>ol>li>a{
+    display: block;
+    color: #fff;
+    font-size: 20px;
+}
+
+header>.sub-wdMnu>.fb_mnu{
+    position: absolute;
+    bottom:50px;
+    left:25px;
+    width:30px;
+    margin-top:30px;
+    text-indent: -9999px;
+    background-image: url(../images/fb_logo.png);
+    background-position: 50% 50%;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    transition:all 0.5s;
+    z-index:1;
+}
+
+header>.sub-wdMnu>.fb_mnu>a{
+    display: block;
+    height:30px;
+}
+
+header>.sub-wdMnu>.fb_mnu:hover>a{
+    animation: circle 1s ease;
+    
+}
+
+@keyframes circle{
+    0%{
+        transform:scale(0);
+        opacity:0;
+    }
+    100%{
+        transform:scale(2);
+        opacity:1;
+        background-color: #1e6fb4;
+    }
+}
+
+
+
+header>.sub-wdMnu>p{
+    position: absolute;
+    bottom:20px;
+    left:20px;
+    color: #fff;
+    font-size: 12px;
+}
+header>.sub-wdMnu>.exit{
+    background:none;
+    border:none;
+    outline:none;
+
+    position: absolute;
+    top:45px;
+    right:50px;
+    width:25px;
+    height:25px;
+    text-indent: -9999px;
+    background-image: url(../images/subMnu_exit.png);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor:pointer;
+}
 
 section{
     width:100%;
